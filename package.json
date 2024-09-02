@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/Mohammed-K-Ambu/RA-24.3#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "firebase-functions": "^4.0.0"
   },
   "devDependencies": {
     "jest": "^29.7.0",
