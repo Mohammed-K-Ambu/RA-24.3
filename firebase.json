@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "public": "public", // This line can be kept if you have static assets, otherwise remove it.
     "ignore": [
       "firebase.json",
       "**/.*",
