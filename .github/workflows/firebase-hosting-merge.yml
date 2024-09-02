@@ -12,11 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: npm ci
+      - run: npm run build # Use this if you have a build step; remove if not needed
       - run: npm install -g firebase-tools
-      - run: firebase deploy --only hosting --token "${{ secrets.FIREBASE_SERVICE_ACCOUNT_RA_24_3 }}"
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_RA_24_3 }}
-          channelId: live
-          projectId: ra-24-3
+      - run: firebase deploy --only hosting --project ra-24-3
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_RA_24_3 }}
+
