@@ -1,11 +1,15 @@
 {
   "hosting": {
-    "public": "public",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "public": "public", // This line can be kept if you have static assets, otherwise remove it.
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
     "rewrites": [
       {
         "source": "**",
-        "function": "app"
+        "function": "app" // The name of your Firebase Function
       }
     ]
   },
