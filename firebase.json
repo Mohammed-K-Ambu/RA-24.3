@@ -8,7 +8,7 @@
     "rewrites": [
       {
         "source": "**",
-        "function": "app" // The name of your Firebase Function
+        "function": "app" // This should match the name of your exported function in your code
       }
     ]
   },
