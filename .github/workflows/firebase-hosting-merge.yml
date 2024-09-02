@@ -11,7 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm ci && npm start
+      - run: npm ci
+      - run: npm install -g firebase-tools
+      - run: firebase deploy --only hosting --token "${{ secrets.FIREBASE_SERVICE_ACCOUNT_RA_24_3 }}"
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
