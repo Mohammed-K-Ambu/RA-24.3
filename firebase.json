@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -8,11 +9,8 @@
     "rewrites": [
       {
         "source": "**",
-        "function": "app" // This should match the name of your exported function in your code
+        "destination": "/index.html"
       }
     ]
-  },
-  "functions": {
-    "source": "."
   }
 }

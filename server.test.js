@@ -1,5 +1,5 @@
 const request = require('supertest');
-const server = require('.'); // Adjust path as necessary
+const server = require('./server'); // Adjust path as necessary
 
 afterAll(() => {
   server.close();
